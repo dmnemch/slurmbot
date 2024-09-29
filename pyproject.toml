@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "slurmbot"
+version = "0.1.0"
+description = "Simple tool to run telegram bot to notify about slurm jobs done."
+authors = ["Dmitry Solovey <dsolovey@ist.ac.at>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+slurmbot = 'slurmbot.__main__:main'

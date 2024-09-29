@@ -49,5 +49,8 @@ def run_bot(jobs, token, chat, mode, sleep_time):
             messages, new_flag = get_finished_jobs(jobs)
             send_message(messages, token, chat)
             time.sleep(sleep_time)
+def main():
+    run_bot(jobs = {}, token=config['token'], chat=config['token'], mode=config['mode'], sleep_time=config['sleep_time'])
 
-run_bot(jobs = {}, token=config['token'], chat=config['token'], mode=config['mode'], sleep_time=config['sleep_time'])
+if __name__ == '__main__':
+    main()
